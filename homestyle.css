@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    height: 157px;
+}
+
+ul {
+    list-style: none;
+    height: 40px;
+    padding-left: 20px;
+
+}
+
+.navbar .lfloat {
+    float: left;
+}
+
+.navbar .rfloat {
+    float: right;
+    border-radius: 25px;
+    margin-top: -20px;
+    margin-right: 15px;
+    text-align: center;
+    padding: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.navbar>ul>li>a {
+    margin-top: 5px;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.lfloat.btn {
+    padding-top: 10px;
+
+}
+
+.rfloat:hover {
+    filter: saturate(150%);
+}
+
+.homepic>img {
+    height: 380px;
+    border-radius: 10%;
+}
+
+.homepic.p1 {
+    float: left;
+    padding-right: 1%;
+    margin-left: 2%;
+}
+
+.homepic.p2 {
+    float: left;
+    padding-right: 2%;
+}
+
+.homepic.p3 {
+    float: left;
+}
+
+.homepic.p4 {
+    float: right;
+    padding-right: 2%;
+}
+
+.homepic.p5 {
+    float: right;
+    padding-right: 3%;
+}
+
+#ntext {
+    width:10%;
+    margin-left: 12%;
+    display: block;
+}
+#ntext:hover{
+    font-size: 19px;
+}
+#overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top:0%;
+    z-index: -1;
+    opacity: 0;
+}
+#signupForm, #loginForm{
+    width: 400px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    transform: translate(-50%,-50%);
+    padding: 30px;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 550;
+    box-shadow: 0px 0px 10px 3px #949191;
+}
+
+#signupForm input, #loginForm input{
+    margin: 10px;
+width: 100%;
+height: 50px;
+border-radius: 16px;
+padding: 10px;
+border: 0;
+border: 1px solid gray
+
+}
+#cross{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 100%;
+}
+#cross:hover{
+    background-color: rgb(218, 213, 213);
+}
+#signupbtn{
+    width: 40% !important;
+    background-color: #FFAF79;
+    border: 0;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+}
+#loginbtn{
+    width: 40% !important;
+    background-color: #FFAF79;
+    border: 0;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 8px;
+    margin: 10px 0px 10px 27px;
+}
+
+#signupbtn:hover ,#loginbtn:hover{
+    cursor: pointer;
+    filter: saturate(150%);
+}

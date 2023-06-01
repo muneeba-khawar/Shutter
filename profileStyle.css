@@ -1,0 +1,72 @@
+*{
+    padding: 0px;
+    font-family: 'Quicksand', sans-serif; 
+    font-weight: 600;
+}
+
+    .container{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap:12px;
+        column-gap:12px;
+        margin: auto;
+        width: 80%;
+        justify-items:center;
+    }
+    .feedPicture{
+        width:250px;
+        padding:10px;
+    }
+    .topFeedLine{
+        margin-top:20px !important;
+        height:10px;
+        background-color:#9b6948;
+        margin: auto;
+        width: 80%;
+    }
+    #username{
+        float:left;
+        margin-left: 20px !important;
+    }
+    #profilePicture{
+        width:100px;
+        float:left;
+    }
+    #about{
+        padding-top:20px;
+        padding-bottom:20px;
+        margin: auto;
+        width: 80%;
+    }
+    #topdiv{
+        margin: auto;
+        width: 80%;
+        height: 125px;
+    }
+    .btn{
+        background-color: #FFAF79;
+        border: 0;
+        color: white;
+        font-size: 17px;
+        font-weight: 600;
+        border-radius: 16px;
+        border: 1px solid gray;
+        height: 50px;
+        padding: 10px;
+    }
+    .btn:hover{
+        cursor: pointer;
+        filter: saturate(150%);
+    }
+    #logOutbtn{
+        float: right;
+    }
+    input, #aboutbtn, #editProfilePicturebtn, #postFeedPicturebtn{
+        margin: 10px;
+        margin-left: 130px !important;
+        height: 50px;
+        border-radius: 16px;
+        padding: 10px;
+        border: 0;
+        border: 1px solid gray !important;
+    }

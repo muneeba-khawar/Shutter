@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="homestyle.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li class="lfloat">
+                <img style="margin-right: 10px;" src="pictures/logo.jpg" width="150px" alt="">
+            </li>
+            <li class="lfoat" style="font-family: 'Quicksand', sans-serif; font-weight: 550;">
+                <a href="javascript:;" id="ntext" onclick="showSignUpForm();"> Stop. Go. Showcase your work and build a
+                    client base.</a>
+            </li>
+
+            <li class="rfloat" style="background-color: #d88e5d;">
+                <a href="javascript:;" style=" color: white;" onclick="showLogInForm();"> Log In</a>
+            </li>
+            <li class="rfloat" style="background-color: #b3886c; color: white;">
+                <a href="javascript:;" style=" color: white;" onclick="showSignUpForm();"> Sign Up</a>
+            </li>
+
+        </ul>
+    </div>
+    <div style="background-color: #9b6948; height: 15px; margin-bottom: 1%; margin-top: 1%;"></div>
+    <div class="homepic p1">
+        <img src="pictures/homepic1.jpg" alt="" width="90%">
+    </div>
+    <div class="homepic p2">
+        <img src="pictures/homepic3.jpg" alt="">
+    </div>
+    <div class="homepic p3">
+        <img src="pictures/homepic4.jpg" alt="" width="110%">
+    </div>
+    <div class="homepic p4">
+        <img src="pictures/homepic5.jpg" alt="">
+    </div>
+    <div class="homepic p5">
+        <img src="pictures/homepic6.jpg" alt="">
+    </div>
+
+    <form action="signup.php" method="post" autocomplete="off">
+        <div id="overlay"></div>
+        <div id="signupForm">
+            <span id="cross" onclick="removeSignUpForm();">&times;</span>
+            <span><img src="logo.jpg" alt="" height="70px"></span>
+            <h1 style="margin-top: 20px; margin-bottom: 20px;">Welcome to Shutter</h2>
+                <h3>Please Sign up</h5>
+                    <table>
+                        <tr>
+                            <td> <label for="username">Username</label> </td>
+                            <td> <input type="text" name="username" id="username" placeholder="enter username" required
+                                    minlength="3" maxlength="25"></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="email">Email address</label> </td>
+                            <td> <input type="email" name="email" id="email" placeholder="enter email address" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <label for="password">Password</label> </td>
+                            <td> <input type="password" name="password" id="password" placeholder="create a password"
+                                    required minlength="6"> </td>
+                        </tr>
+                        <tr>
+                            <td> <label for="bdate">Birth Date</label> </td>
+                            <td> <input type="date" name="bdate" id="bdate" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding-left: 20px;"> <input id="signupbtn" type="submit"> </td>
+                        </tr>
+                    </table>
+        </div>
+    </form>
+
+        <form action="login.php" method="post" autocomplete="off">
+            <div id="loginForm">
+                <span id="cross" onclick="removeLogInForm();">&times;</span>
+                <span><img src="logo.jpg" alt="" height="70px"></span>
+                <h1>Welcome to Shutter</h2>
+                    <h3>Please Log in</h5>
+                        <table>
+                            <tr>
+                                <td> <label for="username">Username</label> </td>
+                                <td> <input type="text" name="username" id="username" placeholder="enter username"
+                                        required></td>
+                            </tr>
+                            <tr>
+                                <td> <label for="password">Password</label> </td>
+                                <td> <input type="password" name="password" id="password" placeholder="enter password"
+                                        required> </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"> <button id="loginbtn" type="submit">Log in</button> </td>
+                            </tr>
+                        </table>
+                        <a href="javascript:;" onclick="newUser();"> <b>New User? Create a free account right now</b> </a>
+            </div>
+        <br>
+    </form>
+
+    <script src="index.js"> </script>
+
+</body>
+
+</html>
