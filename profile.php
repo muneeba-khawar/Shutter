@@ -143,25 +143,52 @@ echo
 
 <button id='editProfilePicturebtn' class='btn' onclick='addProfilePicture()'>Edit Profile Picture</button>
 <form action='' method='post' id=profilePictureform enctype='multipart/form-data' autocomplete='off' >
-</form>";
+</form>
+
+<div class='menu'>
+<a id='feed' href='#' onclick=\"showSection('feedSection')\">Feed</a>
+<a id='saved' href='#' onclick=\"showSection('savedSection')\">Saved</a>
+</div>
+";
+
+echo "<div class='topFeedLine'> </div>";
+echo "<div class='section active' id='feedSection'> ";
 $query2="SELECT `filePath` FROM `userpictures` WHERE `username` = '$username'";
 $result2=$conn->query($query2);
 if($result2->num_rows>0)
 {
-    echo "<div class='topFeedLine'> </div>";
     echo "<div class='container'>";
     while($row=$result2->fetch_assoc())
     {
         echo "<div> <img class='feedPicture' src='".$row['filePath']."' alt=''>
         </div>";
     }
-    echo "</div>";
+    echo "</div> ";
 }
 
 ?>
 <button id='postFeedPicturebtn' class='btn' onclick='addFeedPicturePicture()'>Share Photo</button>
 <form action="" method="post" id="feedPictureForm" enctype="multipart/form-data" autocomplete="off">
 </form>
+
+</div>
+
+<div class="section" id="savedSection">
+<?php
+$query5 = "SELECT `filePath` FROM `savedpictures` WHERE `username` = '$username'";
+$result5 = $conn->query($query5);
+if($result5->num_rows>0)
+{
+    echo "<div class='container'>";
+    while($row=$result5->fetch_assoc())
+    {
+        echo "<div> <img class='feedPicture' src='".$row['filePath']."' alt=''>
+        </div>";
+    }
+    echo "</div> ";
+}
+?>
+</div>
 
 <script src="profile.js" > </script>
 

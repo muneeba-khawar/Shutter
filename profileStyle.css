@@ -13,6 +13,27 @@
         width: 80%;
         justify-items:center;
     }
+    .menu{
+        display: flex;
+        justify-content: center;
+    }
+    .menu a{
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+    }
+    .menu a:active{
+        color: #9b6948;
+    }
+    #feedBtn{
+        text-decoration: underline;
+    }
+    .section{
+        display: none;
+    }
+    .active{
+        display: block;
+    }
     .feedPicture{
         width:250px;
         padding:10px;

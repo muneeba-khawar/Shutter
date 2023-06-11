@@ -75,3 +75,16 @@ function addFeedPicturePicture()
     elm.appendChild(linebreak2);
     elm.appendChild(input3);
 }
+
+function showSection(sectionId)
+{
+    console.log("working");
+    let sections = document.querySelectorAll(".section");
+    sections.forEach(function(section){
+        section.classList.remove('active');
+    });
+
+    let selectedSection = document.getElementById(sectionId);
+    selectedSection.classList.add('active');
+
+}
