@@ -23,10 +23,10 @@
 
 
 $query3="SELECT `profilePicture` FROM `userInfo` WHERE `username`='$username'";
-$result3=$conn->query($query3);
-if($result3)
+$profilePictureResult=$conn->query($query3);
+if($profilePictureResult)
 {
-    $row=$result3->fetch_assoc();
+    $row=$profilePictureResult->fetch_assoc();
     if($row['profilePicture']!==NULL)
     echo "<div id='topdiv'> <img id='profilePicture' src='".$row['profilePicture']."' alt=''>";
     else
@@ -41,10 +41,10 @@ echo " <h2 id='username'>".$username."</h2>
 
 
 $query4="SELECT `about` FROM `userInfo` WHERE `username`='$username'";
-$result4=$conn->query($query4);
-if($result4)
+$aboutResult=$conn->query($query4);
+if($aboutResult)
 {
-    $row=$result4->fetch_assoc();
+    $row=$aboutResult->fetch_assoc();
     if($row['about']!==NULL)
     {
         echo "<div id='about'>".$row['about']."</div>";
@@ -76,8 +76,8 @@ if(isset($_FILES['profilePicture']))
     if($extension=='jpg' || $extension=='jpeg' || $extension=='png' || $extension=='JPG' || $extension=='JPEG')
     {
         $query="UPDATE `userInfo` SET `profilePicture`='$fpath' WHERE `username`='$username'";
-        $result=$conn->query($query);
-        if(!$result)
+        $updateProfilePictureResult=$conn->query($query);
+        if(!$updateProfilePictureResult)
         {
             echo "<script>
             alert('Profile Picture updated successfully.');
@@ -112,8 +112,8 @@ $tag=$_POST['tag'];
     if($extension=='jpg' || $extension=='jpeg' || $extension=='png' || $extension=='JPG')
     {
         $query="INSERT INTO `userPictures` VALUES ('$username', '$fpath','$tag')";
-        $result=$conn->query($query);
-        if($result)
+        $uploadedPictureResult=$conn->query($query);
+        if($uploadedPictureResult)
         {
             echo "<script>
 alert('Image uploaded successfully.');
@@ -154,11 +154,11 @@ echo
 echo "<div class='topFeedLine'> </div>";
 echo "<div class='section active' id='feedSection'> ";
 $query2="SELECT `filePath` FROM `userpictures` WHERE `username` = '$username'";
-$result2=$conn->query($query2);
-if($result2->num_rows>0)
+$feedPicturesResult=$conn->query($query2);
+if($feedPicturesResult->num_rows>0)
 {
     echo "<div class='container'>";
-    while($row=$result2->fetch_assoc())
+    while($row=$feedPicturesResult->fetch_assoc())
     {
         echo "<div> <img class='feedPicture' src='".$row['filePath']."' alt=''>
         </div>";
@@ -176,11 +176,11 @@ if($result2->num_rows>0)
 <div class="section" id="savedSection">
 <?php
 $query5 = "SELECT `filePath` FROM `savedpictures` WHERE `username` = '$username'";
-$result5 = $conn->query($query5);
-if($result5->num_rows>0)
+$savedPicturesResult = $conn->query($query5);
+if($savedPicturesResult->num_rows>0)
 {
     echo "<div class='container'>";
-    while($row=$result5->fetch_assoc())
+    while($row=$savedPicturesResult->fetch_assoc())
     {
         echo "<div> <img class='feedPicture' src='".$row['filePath']."' alt=''>
         </div>";
